@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Usage</title>
+
+
+    <!-- Angular Material CSS now available via Google CDN; version 0.10 used here -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./css/mtimeline.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+
+    <style>
+
+    </style>
+
+
+</head>
+
+<body layout="row" ng-controller="AppCtrl">
+
+
+    <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+
+
+
+        <md-toolbar class="md-whiteframe-z2">
+            <h1 class="md-toolbar-tools"></h1>
+            <h1 class="md-toolbar-tools">Menu</h1>
+        </md-toolbar>
+
+
+
+
+
+        <md-content layout-padding="" ng-controller="LeftCtrl">
+
+
+            <md-list ng-controller="ListCtrl" class="listdemoListControls" ng-app="MyApp">
+
+
+                <md-subheader class="md-no-sticky">Sub Header</md-subheader>
+
+
+                <md-list-item ng-click="navigateTo('menu1', $event)">
+                    <md-icon md-svg-icon="device:bluetooth"></md-icon>
+                    <p>Menu 1</p>
+                </md-list-item>
+
+
+                <md-list-item ng-click="navigateTo('menu2', $event)">
+                    <md-icon md-svg-icon="device:bluetooth"></md-icon>
+                    <p>Menu 2</p>
+                </md-list-item>
+
+
+
+                <md-divider></md-divider>
+
+            </md-list>
+
+
+
+        </md-content>
+
+
+
+
+
+    </md-sidenav>
+
+
+
+
+
+    <div layout="column" tabindex="-1" role="main" flex="" aria-hidden="false">
+
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <md-button class="md-icon-button" aria-label="Settings" ng-click="toggleLeft()" hide-gt-sm>
+                    <md-icon md-svg-icon="../resources/icons/ic_menu_white_18px.svg"></md-icon>
+                </md-button>
+                <h2>
+					<span class="md-headline">Train Live Status</span>
+				</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" aria-label="Search" ng-click="toggleRight()">
+                    <md-icon md-svg-icon="../resources/icons/ic_search_white_18px.svg"></md-icon>
+                </md-button>
+                <md-button class="md-icon-button" aria-label="More">
+                    <md-icon md-svg-icon="../resources/icons/ic_more_vert_white_18px.svg"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+
+
+
+        <md-toolbar md-scroll-shrink="" class="">
+            <div class="md-toolbar-tools">
+                <h3>
+					<span class="md-subhead">Sabari Express - 17230</span>
+				</h3>
+            </div>
+        </md-toolbar>
+
+
+
+
+        <md-content layout-padding class="contend-md">
+        
+        
+        
+            <!-- The time line -->
+<!-- 
+            <div layout="row" layout-align="space-between center">
+                <md-button ng-click="toggleLeft()" class="md-primary">
+                    Toggle left
+                </md-button>
+
+                <md-button ng-click="vm.showNewDialog($event)">
+                    <md-icon md-svg-icon="editor:attach_file"></md-icon>
+                    <span>New</span>
+                </md-button>
+
+                <md-button ng-click="toggleRight()" class="md-primary">
+                    Toggle right
+                </md-button>
+
+            </div>
+
+ -->
+            <ul class="timeline">
+            
+            
+            	
+                <!-- timeline time label -->
+                <li class="time-label md-caption">
+                <span class="md-red">10 Feb. 2014 </span>
+                </li>
+                <!-- /.timeline-label -->
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <!-- timeline item -->
+                <li>
+                	
+                	<i class="fa fa-check bg-green"></i>
+                    <md-card class="timeline-item">
+                        <md-card-content>
+                            <div class="md-caption" layout="row" layout-align="space-between center">
+                                <div>10:00 AM</div>
+                                <div>12:00AM</div>
+                            </div>
+
+                            <div>
+                                <h1 class="md-title jag-green">Hyderabad</h1>
+                            </div>
+
+                            <div class="md-caption" layout="row" layout-align="space-between center">
+                                <div>10:00 AM</div>
+                                <div>12:00AM</div>
+                            </div>
+                        </md-card-content>
+                    </md-card>
+                </li>
+                <!-- END timeline item -->
+                
+                
+                
+                
+                
+                <!-- timeline item -->
+                <li>
+                	
+                	<i class="fa fa-check bg-green"></i>
+                    <md-card class="timeline-item">
+                        <md-card-content>
+                            <div class="md-caption" layout="row" layout-align="space-between center">
+                                <div>10:00 AM</div>
+                                <div>12:00AM</div>
+                            </div>
+
+                            <div>
+                                <h1 class="md-title jag-green">Hyderabad</h1>
+                            </div>
+
+                            <div class="md-caption" layout="row" layout-align="space-between center">
+                                <div>10:00 AM</div>
+                                <div>12:00AM</div>
+                            </div>
+                        </md-card-content>
+                    </md-card>
+                </li>
+                <!-- END timeline item -->
+                
+                
+                
+                
+                
+                <!-- timeline item -->
+                <li>
+                	
+                	<i class="fa fa-clock-o bg-gray"></i>
+                    <md-card class="timeline-item">
+                        <md-card-content>
+                            <div class="md-caption" layout="row" layout-align="space-between center">
+                                <div>10:00 AM</div>
+                                <div>12:00AM</div>
+                            </div>
+
+                            <div>
+                                <h1 class="md-title jtext-gray">Hyderabad</h1>
+                            </div>
+
+                            <div class="md-caption" layout="row" layout-align="space-between center">
+                                <div>10:00 AM</div>
+                                <div>12:00AM</div>
+                            </div>
+                        </md-card-content>
+                    </md-card>
+                </li>
+                <!-- END timeline item -->
+                
+                
+                
+                
+                
+                <!-- timeline item -->
+                <li>
+                	
+                	<i class="fa fa-clock-o bg-gray"></i>
+                    <md-card class="timeline-item">
+                        <md-card-content>
+                            <div class="md-caption" layout="row" layout-align="space-between center">
+                                <div>10:00 AM</div>
+                                <div>12:00AM</div>
+                            </div>
+
+                            <div>
+                                <h1 class="md-title jtext-gray">Hyderabad</h1>
+                            </div>
+
+                            <div class="md-caption" layout="row" layout-align="space-between center">
+                                <div>10:00 AM</div>
+                                <div>12:00AM</div>
+                            </div>
+                        </md-card-content>
+                    </md-card>
+                </li>
+                <!-- END timeline item -->
+                
+                
+                
+                
+                
+                <!-- timeline item -->
+                <li>
+                	
+                	<i class="fa fa-clock-o bg-gray"></i>
+                    <md-card class="timeline-item">
+                        <md-card-content>
+                            <div class="md-caption" layout="row" layout-align="space-between center">
+                                <div>10:00 AM</div>
+                                <div>12:00AM</div>
+                            </div>
+
+                            <div>
+                                <h1 class="md-title jtext-gray">Hyderabad</h1>
+                            </div>
+
+                            <div class="md-caption" layout="row" layout-align="space-between center">
+                                <div>10:00 AM</div>
+                                <div>12:00AM</div>
+                            </div>
+                        </md-card-content>
+                    </md-card>
+                </li>
+                <!-- END timeline item -->
+                
+                
+                
+                
+                
+                <!-- timeline item -->
+                <li>
+                	
+                	<i class="fa fa-clock-o bg-gray"></i>
+                    <md-card class="timeline-item">
+                        <md-card-content>
+                            <div class="md-caption" layout="row" layout-align="space-between center">
+                                <div>10:00 AM</div>
+                                <div>12:00AM</div>
+                            </div>
+
+                            <div>
+                                <h1 class="md-title jtext-gray">Hyderabad</h1>
+                            </div>
+
+                            <div class="md-caption" layout="row" layout-align="space-between center">
+                                <div>10:00 AM</div>
+                                <div>12:00AM</div>
+                            </div>
+                        </md-card-content>
+                    </md-card>
+                </li>
+                <!-- END timeline item -->
+                
+                  <!-- timeline item -->
+                <li>
+                	
+                	<i class="fa fa-clock-o bg-gray"></i>
+                    <md-card class="timeline-item">
+                        <md-card-content>
+                            <div class="md-caption" layout="row" layout-align="space-between center">
+                                <div>10:00 AM</div>
+                                <div>12:00AM</div>
+                            </div>
+
+                            <div>
+                                <h1 class="md-title jtext-gray">Hyderabad</h1>
+                            </div>
+
+                            <div class="md-caption" layout="row" layout-align="space-between center">
+                                <div>10:00 AM</div>
+                                <div>12:00AM</div>
+                            </div>
+                        </md-card-content>
+                    </md-card>
+                </li>
+                <!-- END timeline item -->
+                
+                  <!-- timeline item -->
+                <li>
+                	
+                	<i class="fa fa-clock-o bg-gray"></i>
+                    <md-card class="timeline-item">
+                        <md-card-content>
+                            <div class="md-caption" layout="row" layout-align="space-between center">
+                                <div>10:00 AM</div>
+                                <div>12:00AM</div>
+                            </div>
+
+                            <div>
+                                <h1 class="md-title jtext-gray">Hyderabad</h1>
+                            </div>
+
+                            <div class="md-caption" layout="row" layout-align="space-between center">
+                                <div>10:00 AM</div>
+                                <div>12:00AM</div>
+                            </div>
+                        </md-card-content>
+                    </md-card>
+                </li>
+                <!-- END timeline item -->
+                
+                  <!-- timeline item -->
+                <li>
+                	
+                	<i class="fa fa-clock-o bg-gray"></i>
+                    <md-card class="timeline-item">
+                        <md-card-content>
+                            <div class="md-caption" layout="row" layout-align="space-between center">
+                                <div>10:00 AM</div>
+                                <div>12:00AM</div>
+                            </div>
+
+                            <div>
+                                <h1 class="md-title jtext-gray">Hyderabad</h1>
+                            </div>
+
+                            <div class="md-caption" layout="row" layout-align="space-between center">
+                                <div>10:00 AM</div>
+                                <div>12:00AM</div>
+                            </div>
+                        </md-card-content>
+                    </md-card>
+                </li>
+                <!-- END timeline item -->
+                
+                
+                 <!-- timeline time label -->
+                <li class="time-label md-caption">
+                
+                	<span class="md-grey"> 10 Feb.2014 </span>
+                	
+                </li>
+
+            </ul>
+        </md-content>
+        </md-content>
+
+
+
+
+
+        <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
+            <md-toolbar class="md-theme-light">
+                <h1 class="md-toolbar-tools">Search Train</h1>
+            </md-toolbar>
+            <md-content ng-controller="RightCtrl" layout-padding="">
+                <form>
+                    <md-input-container>
+                        <label for="testInput">Train Number / Train Name</label>
+                        <input type="text" id="testInput" ng-model="data" md-sidenav-focus=""> </md-input-container>
+                </form>
+                <md-button ng-click="close()" class="md-primary"> Close Sidenav Right </md-button>
+            </md-content>
+
+
+        </md-sidenav>
+
+    </div>
+
+
+    <!-- Angular Material Dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-messages.min.js"></script>
+
+
+    <!-- Angular Material Javascript now available via Google CDN; version 0.10 used here -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.js"></script>
+
+
+
+    <script src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

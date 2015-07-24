@@ -1,0 +1,23 @@
+html,body{
+overflow: hidden;
+
+}
+
+
+.site-sidenav {
+  background: #fff;
+}
+.site-sidenav md-content {
+  background: transparent;
+}
+.site-sidenav,
+.site-sidenav.md-locked-open-add-active,
+.site-sidenav.md-locked-open {
+  width: 256px;
+  min-width: 256px;
+  max-width: 256px;
+}
+.site-sidenav > * {
+  min-width: 218px;
+}
+

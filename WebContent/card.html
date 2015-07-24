@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<link rel="stylesheet"
+	href="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.css">
+
+
+<link rel="stylesheet" href="../timeline.css" />
+
+<style type="text/css">
+.carddemoBasicUsage md-card {
+	min-height: 150px;
+}
+</style>
+
+</head>
+<body>
+
+
+
+	<div class="carddemoBasicUsage" ng-app="MyApp">
+
+		<md-content class="md-padding"> 
+		
+		<!-- The time line -->
+              <ul class="timeline">
+                <!-- timeline time label -->
+                <li class="time-label">
+                  <span class="bg-red">
+                    10 Feb. 2014
+                  </span>
+                </li>
+                <!-- /.timeline-label -->
+                <!-- timeline item -->
+                <li>
+                  <i class="fa fa-check bg-green"></i>
+                  <div class="timeline-item">
+                    <div class="timeline-header">
+                      <div class="row">
+                      <div class="col-sm-6"><span class="pull-left text-muted">Source</span></div>
+                      <div class="col-sm-6"><span class="pull-right"><a class="btn btn-success btn-xs actual-arrival"><i class="fa fa-check"></i> Source</a></span></div>
+                      </div>
+                    </div>
+                    <div class="timeline-body">
+                      <a href="#" class="text-green">Hyderabad Decan</a>
+                    </div>
+                    <div class="timeline-footer">
+                      <div class="row">
+                      <div class="col-sm-6"><span class="pull-left text-muted"><i class="fa fa-clock-o"></i> 11:25 AM</span></div>
+                      <div class="col-sm-6"><span class="pull-right"><a class="btn btn-success btn-xs actual-arrival"><i class="fa fa-check"></i> 11:25 AM</a></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!-- END timeline item -->
+
+                <!-- timeline item -->
+                <li>
+                  <i class="fa fa-check bg-green"></i>
+                  <div class="timeline-item">
+                    <div class="timeline-header">
+                      <div class="row">
+                      <div class="col-sm-6"><span class="pull-left text-muted"><i class="fa fa-clock-o"></i> 11:50 AM</span></div>
+                      <div class="col-sm-6"><span class="pull-right"><a class="btn btn-danger btn-xs actual-arrival"><i class="fa fa-check"></i> 11:52 AM</a></span></div>
+                      </div>
+                    </div>
+                    <div class="timeline-body">
+                      <a href="#" class="text-green">Secunderabad</a>
+                    </div>
+                    <div class="timeline-footer">
+                      <div class="row">
+                      <div class="col-sm-6"><span class="pull-left text-muted"><i class="fa fa-clock-o"></i> 11:55 AM</span></div>
+                      <div class="col-sm-6"><span class="pull-right"><a class="btn btn-danger btn-xs actual-arrival"><i class="fa fa-check"></i> 11:55 AM</a></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!-- END timeline item -->
+
+                <!-- timeline item -->
+                <li>
+                  <i class="fa fa-clock-o bg-gray"></i>
+                  <div class="timeline-item">
+                    <div class="timeline-header">
+                      <div class="row">
+                      <div class="col-sm-6"><span class="pull-left text-muted"><i class="fa fa-clock-o"></i> 01:30 PM</span></div>
+                      <div class="col-sm-6">
+                        <span class="pull-right">
+                          <!--
+                        <a class="btn btn-success btn-xs actual-arrival"><i class="fa fa-check"></i> 01:31 PM</a>
+                         -->
+                        </span>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="timeline-body">
+                      <a href="#">Nalgonda</a>
+                    </div>
+                    <div class="timeline-footer">
+                      <div class="row">
+                      <div class="col-sm-6"><span class="pull-left text-muted"><i class="fa fa-clock-o"></i> 02:02 PM</span></div>
+                      <div class="col-sm-6">
+                        <span class="pull-right">
+                        <!--
+                        <a class="btn btn-success btn-xs actual-arrival"><i class="fa fa-check"></i> 02:08 PM</a>
+                        -->
+
+                        </span>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!-- END timeline item -->
+                <!-- timeline time label -->
+                <li class="time-label">
+                  <span class="bg-gray">
+                    10 Feb. 2014
+                  </span>
+                </li>
+
+              </ul>
+		
+		
+		
+		
+		
+		
+		</md-content>
+
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div ng-controller="AppCtrl" class="carddemoBasicUsage" ng-app="MyApp">
+
+		<md-content class="md-padding"> <md-card> <img
+			ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
+		<md-card-content>
+		<h2 class="md-title">Paracosm</h2>
+		<p>The titles of Washed Out's breakthrough song and the first
+			single from Paracosm share the two most important words in Ernest
+			Greene's musical language: feel it. It's a simple request, as well...
+		</p>
+		</md-card-content>
+		<div class="md-actions" layout="row" layout-align="end center">
+			<md-button>Action 1</md-button>
+			<md-button>Action 2</md-button>
+		</div>
+		</md-card> <br>
+
+		<md-card> <img ng-src="{{imagePath}}" class="md-card-image"
+			alt="Washed Out"> <md-card-content>
+		<h2 class="md-title">Paracosm</h2>
+		<p>The titles of Washed Out's breakthrough song and the first
+			single from Paracosm share the two most important words in Ernest
+			Greene's musical language: feel it. It's a simple request, as well...
+		</p>
+		</md-card-content> </md-card> <br>
+
+		<md-card> <img ng-src="{{imagePath}}" class="md-card-image"
+			alt="Washed Out"> <md-card-content>
+		<h2 class="md-title">Paracosm</h2>
+		<p>The titles of Washed Out's breakthrough song and the first
+			single from Paracosm share the two most important words in Ernest
+			Greene's musical language: feel it. It's a simple request, as well...
+		</p>
+		</md-card-content> </md-card> </md-content>
+	</div>
+
+
+
+	<script type="text/javascript">
+
+
+angular.module('MyApp')
+
+.controller('AppCtrl', function($scope) {
+  $scope.imagePath = 'img/washedout.png';
+});
+
+
+
+</script>
+
+</body>
+</html>

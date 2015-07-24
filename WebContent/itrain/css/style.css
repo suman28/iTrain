@@ -1,0 +1,55 @@
+html,body {
+	overflow: hidden;
+	font-family:'Roboto',sans-serif;
+}
+
+.site-sidenav {
+	background: #fff;
+}
+
+.site-sidenav md-content {
+	background: transparent;
+}
+
+.site-sidenav,.site-sidenav.md-locked-open-add-active,.site-sidenav.md-locked-open
+	{
+	width: 256px;
+	min-width: 256px;
+	max-width: 256px;
+}
+
+.site-sidenav>* {
+	min-width: 218px;
+}
+
+
+.jtext-gray{
+	color: rgba(0,0,0,0.54);
+}
+
+
+
+
+
+
+/* 
+md-list-item > js-icon:first-child, md-list-item .md-list-item-inner > js-icon:first-child {
+  margin-right: 32px;
+}
+
+js-icon {
+  margin: auto;
+  background-repeat: no-repeat no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+  height: 24px;
+  width: 24px;
+}
+
+
+js-icon {
+  color: rgba(0,0,0,0.54);
+}
+
+ */

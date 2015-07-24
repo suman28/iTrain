@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>List Controls</title>
+    
+    
+    
+    <link rel='stylesheet prefetch' href='http://cdn.rawgit.com/angular/bower-material/v0.10.0/angular-material.css'>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+<body layout="row" ng-app="myApp"  ng-controller="AppCtrl">
+
+
+
+
+<md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2"
+				md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+
+			<md-toolbar class="md-theme-indigo md-whiteframe-z2">
+			<h1 class="md-toolbar-tools">Sidenav Left</h1>
+			</md-toolbar> 
+			
+			
+			
+			
+			
+			
+			<md-content layout-padding="" ng-controller="LeftCtrl">
+						
+
+    <md-list ng-controller="ListCtrl" class="listdemoListControls">
+    
+   
+  <md-list-item ng-click="navigateTo(setting.extraScreen, $event)" ng-repeat="setting in settings">
+    <md-icon md-svg-icon="{{setting.icon}}"></md-icon>
+    <p> {{ setting.name }} </p>
+    <md-switch class="md-secondary" ng-model="setting.enabled"></md-switch>
+  </md-list-item>
+  <md-list-item ng-click="navigateTo('data usage', $event)">
+    <md-icon md-svg-icon="{{setting.icon}}"></md-icon>
+    <p>Data Usage</p>
+  </md-list-item>
+
+  <md-divider></md-divider>
+
+  
+
+
+			</md-content> 
+			
+			
+			
+			
+			
+			
+			
+			
+			</md-sidenav>
+
+
+
+
+
+<div layout="column" tabindex="-1" role="main" flex="" aria-hidden="false">
+
+	<md-toolbar>
+			<div class="md-toolbar-tools">
+				<md-button class="md-icon-button" aria-label="Settings"
+					ng-click="toggleLeft()"> <md-icon
+					md-svg-icon="../resources/icons/ic_menu_white_18px.svg"></md-icon>
+				</md-button>
+				<h2>
+					<span>Train Live Status</span>
+				</h2>
+				<span flex></span>
+				<md-button class="md-icon-button" aria-label="Favorite">
+				<md-icon md-svg-icon="../resources/icons/ic_search_white_18px.svg"></md-icon>
+				</md-button>
+				<md-button class="md-icon-button" aria-label="More"> <md-icon
+					md-svg-icon="../resources/icons/ic_more_vert_white_18px.svg"></md-icon>
+				</md-button>
+			</div>
+			</md-toolbar> 
+			
+			
+			
+			<md-toolbar md-scroll-shrink="" class="">
+			<div class="md-toolbar-tools">
+				<h3>
+					<span>Sabari Express - 17230</span>
+				</h3>
+			</div>
+			</md-toolbar> 
+			
+			
+			
+			
+			<md-content style="height: 600px;" layout-padding> <!-- The time line -->
+			
+			<div layout="row" layout-align="space-between center">
+          <md-button ng-click="toggleLeft()" class="md-primary">
+            Toggle left
+          </md-button>
+          
+           <md-button ng-click="toggleRight()" class="md-primary">
+            Toggle right
+          </md-button>
+          
+        </div>
+
+			
+			<ul class="timeline">
+				<!-- timeline time label -->
+				<li class="time-label md-caption"><span class="bg-red">
+						10 Feb. 2014 </span></li>
+				<!-- /.timeline-label -->
+				<!-- timeline item -->
+				<li><i class="fa fa-check bg-green"></i> <md-card
+						class="timeline-item"> <md-card-content>
+					<div class="md-caption" layout="row"
+						layout-align="space-between center">
+						<div>10:00 AM</div>
+						<div>12:00AM</div>
+					</div>
+
+					<div>
+						<h1 class="md-title jag-green">Hyderabad</h1>
+					</div>
+
+					<div class="md-caption" layout="row"
+						layout-align="space-between center">
+						<div>10:00 AM</div>
+						<div>12:00AM</div>
+					</div>
+					</md-card-content> </md-card></li>
+				<!-- END timeline item -->
+
+				<!-- timeline item -->
+				<li><i class="fa fa-check bg-green"></i> <md-card
+						class="timeline-item"> <md-card-content>
+					<div class="timeline-header">10:00 AM --- 12:00AM</div>
+					<div class="timeline-body">
+						<a href="#" class="text-green"><h2 class="md-title">Paracosm</h2></a>
+					</div>
+
+					<div class="timeline-footer">10:00 AM --- 12:00AM</div>
+
+					</md-card-content> </md-card></li>
+				<!-- END timeline item -->
+
+				<!-- timeline item -->
+				<li><i class="fa fa-clock-o bg-gray"></i> <md-card
+						class="timeline-item"> <md-card-content>
+					<div class="timeline-header">10:00 AM --- 12:00AM</div>
+					<div class="timeline-body">
+						<a href="#" class="text-green"><h2 class="md-title">Paracosm</h2></a>
+					</div>
+
+					<div class="timeline-footer">10:00 AM --- 12:00AM</div>
+
+					</md-card-content> </md-card></li>
+				<!-- END timeline item -->
+				<!-- timeline item -->
+				<li><i class="fa fa-clock-o bg-gray"></i> <md-card
+						class="timeline-item"> <md-card-content>
+					<div class="timeline-header">10:00 AM --- 12:00AM</div>
+					<div class="timeline-body">
+						<a href="#" class="text-green"><h2 class="md-title">Paracosm</h2></a>
+					</div>
+
+					<div class="timeline-footer">10:00 AM --- 12:00AM</div>
+
+					</md-card-content> </md-card></li>
+				<!-- END timeline item -->
+				<!-- timeline item -->
+				<li><i class="fa fa-clock-o bg-gray"></i> <md-card
+						class="timeline-item"> <md-card-content>
+					<div class="timeline-header">10:00 AM --- 12:00AM</div>
+					<div class="timeline-body">
+						<a href="#" class="text-green"><h2 class="md-title">Paracosm</h2></a>
+					</div>
+
+					<div class="timeline-footer">10:00 AM --- 12:00AM</div>
+
+					</md-card-content> </md-card></li>
+				<!-- END timeline item -->
+				<!-- timeline item -->
+				<li><i class="fa fa-clock-o bg-gray"></i> <md-card
+						class="timeline-item"> <md-card-content>
+					<div class="timeline-header">10:00 AM --- 12:00AM</div>
+					<div class="timeline-body">
+						<a href="#" class="text-green"><h2 class="md-title">Paracosm</h2></a>
+					</div>
+
+					<div class="timeline-footer">10:00 AM --- 12:00AM</div>
+
+					</md-card-content> </md-card></li>
+				<!-- END timeline item -->
+				<!-- timeline time label -->
+				<li class="time-label"><span class="bg-gray"> 10 Feb.
+						2014 </span></li>
+
+			</ul>
+			</md-content> </md-content>
+
+			
+			
+			
+			
+			
+			
+			<md-sidenav class="md-sidenav-right md-whiteframe-z2"
+				md-component-id="right"> <md-toolbar
+				class="md-theme-light">
+			<h1 class="md-toolbar-tools">Sidenav Right</h1>
+			</md-toolbar> <md-content ng-controller="RightCtrl" layout-padding="">
+			<form>
+				<md-input-container> <label for="testInput">Test
+					input</label> <input type="text" id="testInput" ng-model="data"
+					md-sidenav-focus=""> </md-input-container>
+			</form>
+			<md-button ng-click="close()" class="md-primary"> Close
+			Sidenav Right </md-button> </md-content> 
+			
+			
+			</md-sidenav>
+
+	</div>
+
+
+
+
+
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-messages.min.js'></script>
+<script src='http://cdn.rawgit.com/angular/bower-material/v0.10.0/angular-material.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/assets-cache.js'></script>
+<script src="//cdn.jsdelivr.net/angular-material-icons/0.4.0/angular-material-icons.min.js"></script> 
+
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>
